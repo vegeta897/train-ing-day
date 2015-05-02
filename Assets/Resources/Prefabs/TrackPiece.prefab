@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2312942}
   - 114: {fileID: 11448168}
   m_Layer: 0
-  m_Name: Track
+  m_Name: TrackPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
