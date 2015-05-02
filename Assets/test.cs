@@ -10,7 +10,7 @@ public class test : MonoBehaviour
         Track[,] map = new Track[100, 100];
         int x = 25;
         int y = 25;
-        for (int i = 0; i < 300; i++)
+        for (int i = 0; i < 24; i++)
         {
             int dir = Random.Range(0, 3);
             for (int j = 0; j < 2; j++)
