@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Factory : MonoBehaviour {
+public class Factory : MonoBehaviour 
+{
 
     public Object CreateTrain()
     {
@@ -11,6 +12,11 @@ public class Factory : MonoBehaviour {
     public Object CreateTrack()
     {
         return Resources.Load("Prefabs/TrackPiece");
+    }
+
+    public Object CreateStation()
+    {
+        return Resources.Load("Prefabs/StationPiece");
     }
 
 	// Use this for initialization

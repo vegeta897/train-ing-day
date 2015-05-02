@@ -15,11 +15,13 @@ public class Map : MonoBehaviour
             {
                 Debug.Log("Creating track at " + x + ", " + y);
                 map[x, y] = Instantiate(GetComponent<Factory>().CreateTrack(), new Vector3(x, 0, y), Quaternion.identity);
-                Debug.Log(map[x, y]);
             }
             else
             {
-                Destroy(map[x, y]);
+                if(map[x,y].name != "StationPiece(Clone)")
+                {
+                    Destroy(map[x, y]);
+                }
             }
         }
     }
@@ -27,7 +29,14 @@ public class Map : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
+        for(int i = 0; i < 3; i++)
+        {
+            int x = Random.Range(0, 50);
+            int y = Random.Range(0, 50);
 
+            Debug.Log("Creating station at " + x + ", " + y);
+            map[x, y] = Instantiate(GetComponent<Factory>().CreateStation(), new Vector3(x, 0, y), Quaternion.identity);
+        }
 	}
 
 	// Update is called once per frame
