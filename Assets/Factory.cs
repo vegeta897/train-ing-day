@@ -8,6 +8,11 @@ public class Factory : MonoBehaviour {
         return Resources.Load("Prefabs/TrainDrainEngain");
     }
 
+    public Object CreateTrack()
+    {
+        return Resources.Load("Prefabs/TrackPiece");
+    }
+
 	// Use this for initialization
 	void Start () {
 	    

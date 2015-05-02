@@ -39,9 +39,9 @@ public class Screen : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit, 2000f))
         {
-            Instantiate(GetComponent<Factory>().CreateTrain(), hit.point, Quaternion.identity);
-            Debug.Log(hit.collider.name);
+            Debug.Log(hit.point);
+            GetComponent<Map>().AddTrack(Mathf.RoundToInt(hit.point.x), Mathf.RoundToInt(hit.point.z));
+            //Instantiate(GetComponent<Factory>().CreateTrain(), hit.point, Quaternion.identity);
         }
-        Debug.Log(hit.point.ToString());
     }
 }
