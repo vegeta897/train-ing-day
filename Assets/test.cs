@@ -14,7 +14,7 @@ public class test : MonoBehaviour
             int y = Random.Range(0, 50);
             Debug.Log(x + ":" + y);
             map[x, y] = gameObject.AddComponent<Track>();
-            map[x, y].gridX = x; map[x, y].gridY = y;
+            map[x, y].SetPosition(x, y);
         }
 	}
 

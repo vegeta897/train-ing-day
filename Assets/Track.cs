@@ -4,8 +4,14 @@ using System.Collections;
 public class Track : MonoBehaviour
 {
 
-    public int gridX { get; set; }
-    public int gridY { get; set; }
+    int gridX = 0;
+    int gridY = 0;
+
+    public void SetPosition (int x, int y)
+    {
+        gridX = x;
+        gridY = y;
+    }
 
 	// Use this for initialization
 	void Start () 
