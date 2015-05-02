@@ -8,13 +8,31 @@ public class test : MonoBehaviour
 	void Start () 
     {
         Track[,] map = new Track[100, 100];
-        for (int i = 0; i < 30; i++)
+        int x = 25;
+        int y = 25;
+        for (int i = 0; i < 300; i++)
         {
-            int x = Random.Range(0, 50);
-            int y = Random.Range(0, 50);
-            Debug.Log(x + ":" + y);
-            map[x, y] = gameObject.AddComponent<Track>();
-            map[x, y].SetPosition(x, y);
+            int dir = Random.Range(0, 3);
+            for (int j = 0; j < 2; j++)
+            {
+                switch (dir)
+                {
+                    case 0:
+                        x++;
+                        break;
+                    case 1:
+                        x--;
+                        break;
+                    case 2:
+                        y++;
+                        break;
+                    case 3:
+                        y--;
+                        break;
+                }
+                map[x, y] = gameObject.AddComponent<Track>();
+                map[x, y].SetPosition(x, y);
+            }
         }
 	}
 
