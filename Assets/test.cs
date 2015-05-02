@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class test : MonoBehaviour 
 {
@@ -8,9 +7,15 @@ public class test : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        int[,] map = new int[100, 100];
-        map[50, 50] = 3;
-        Debug.Log(map[50,50]);
+        Track[,] map = new Track[100, 100];
+        for (int i = 0; i < 30; i++)
+        {
+            int x = Random.Range(0, 50);
+            int y = Random.Range(0, 50);
+            Debug.Log(x + ":" + y);
+            map[x, y] = gameObject.AddComponent<Track>();
+            map[x, y].gridX = x; map[x, y].gridY = y;
+        }
 	}
 
 	// Update is called once per frame
